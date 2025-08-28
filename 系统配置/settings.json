@@ -1,0 +1,55 @@
+{
+  "system": {
+    "name": "AI Agent 文章生成器",
+    "version": "1.0.0",
+    "author": "超级峰",
+    "description": "基于AI Agent的内容创作自动化系统"
+  },
+  "article_creation": {
+    "default_platform": "wechat_public",
+    "target_length": {
+      "wechat_public": "2000-5000",
+      "zhihu": "3000-8000",
+      "xiaohongshu": "500-1500",
+      "bilibili": "2000-4000"
+    },
+    "quality_standards": {
+      "title_hook": true,
+      "structure_clear": true,
+      "original_content": true,
+      "style_consistent": true,
+      "appropriate_length": true
+    }
+  },
+  "workflow": {
+    "steps": [
+      "material_preprocessing",
+      "element_extraction", 
+      "outline_generation",
+      "content_expansion",
+      "manual_refinement"
+    ],
+    "interactive_steps": ["outline_generation"],
+    "auto_steps": ["material_preprocessing", "element_extraction", "content_expansion"]
+  },
+  "ai_config": {
+    "model": "gpt-4",
+    "temperature": 0.7,
+    "max_tokens": 4000,
+    "top_p": 0.9,
+    "frequency_penalty": 0.1,
+    "presence_penalty": 0.1
+  },
+  "output_formats": {
+    "extracted_meta": "json",
+    "article_structure": "markdown",
+    "article_draft": "markdown",
+    "final_article": "markdown"
+  },
+  "file_paths": {
+    "materials_dir": "Articles/Materials/",
+    "templates_dir": "Templates/",
+    "memories_dir": "Memories/",
+    "output_dir": "Articles/"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "contents": {
+    "ai_agent_workflow": {
+      "title": "10分钟生成一篇爆款文章，普通人也能学会的AI Agent工作流搭建教程",
+      "author": "超级峰",
+      "publish_date": "2024-01-15",
+      "read_time": "24分钟",
+      "platform": "wechat_public",
+      "performance": {
+        "views": 6000,
+        "likes": 450,
+        "shares": 120
+      },
+      "keywords": ["AI Agent", "工作流", "内容创作", "自动化", "效率提升"],
+      "structure": {
+        "sections": [
+          "痛点描述",
+          "AI Agent矩阵介绍", 
+          "核心能力解构",
+          "实战案例演示",
+          "人机协同模式",
+          "行动指南"
+        ]
+      },
+      "style_characteristics": {
+        "tone": "亲切专业",
+        "structure": "问题-解决方案-案例-指导",
+        "hook_pattern": "痛点描述+解决方案",
+        "length": "4000字"
+      }
+    }
+  },
+  "examples": {
+    "wechat_bestsellers": [
+      {
+        "title": "我用AI Agent把工作效率提升了300%，方法都在这里",
+        "views": 8000,
+        "hook": "数据对比+惊人效果",
+        "structure": "个人经历+方法分享+效果展示"
+      },
+      {
+        "title": "从0到1搭建AI工作流，这些坑我都帮你踩过了",
+        "views": 6500,
+        "hook": "痛点描述+解决方案",
+        "structure": "问题分析+解决方案+避坑指南"
+      }
+    ],
+    "zhihu_bestsellers": [
+      {
+        "title": "如何从零开始搭建AI Agent工作流？",
+        "views": 12000,
+        "hook": "问题导向+实用价值",
+        "structure": "问题分析+深度解答+案例支撑"
+      }
+    ]
+  },
+  "knowledge_base": {
+    "ai_terms": ["AI Agent", "Prompt", "Workflow", "LLM", "RAG"],
+    "content_creation": ["钩子", "爆款", "痛点", "价值主张", "人设"],
+    "community_management": ["社群", "日报", "活跃度", "潜水", "拉新"],
+    "workflow_terms": ["自动化", "脚本", "配置", "模板", "迭代"]
+  },
+  "style_patterns": {
+    "wechat_public": {
+      "title_patterns": [
+        "数字+分钟+学会+XXX，普通人也能+动作",
+        "我用+工具+把+指标+提升了+数字%，方法都在这里",
+        "从0到1+动作，这些坑我都帮你踩过了"
+      ],
+      "hook_patterns": [
+        "痛点描述+解决方案",
+        "数据对比+惊人效果",
+        "个人经历+实用价值"
+      ]
+    }
+  }
+}

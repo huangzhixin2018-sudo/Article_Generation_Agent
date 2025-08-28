@@ -1,0 +1,71 @@
+{
+  "wechat_public": {
+    "name": "微信公众号",
+    "characteristics": {
+      "title_style": "吸引眼球，带有情感色彩，使用数字和符号",
+      "content_length": "2000-5000字",
+      "structure": "开头钩子+分点论述+结尾总结",
+      "tone": "亲切专业，有个人色彩",
+      "formatting": "段落简短，重点加粗，适当使用表情符号",
+      "interaction": "鼓励评论和转发"
+    },
+    "title_examples": [
+      "10分钟学会XXX，普通人也能上手的实用教程",
+      "我用AI Agent把工作效率提升了300%，方法都在这里",
+      "从0到1搭建AI工作流，这些坑我都帮你踩过了"
+    ],
+    "hook_patterns": [
+      "痛点描述+解决方案",
+      "数据对比+惊人效果", 
+      "个人经历+实用价值"
+    ]
+  },
+  "zhihu": {
+    "name": "知乎",
+    "characteristics": {
+      "title_style": "问题导向，专业深度，逻辑清晰",
+      "content_length": "3000-8000字",
+      "structure": "问题分析+深度解答+案例支撑",
+      "tone": "理性客观，专业权威",
+      "formatting": "结构清晰，引用规范，图表丰富",
+      "interaction": "鼓励讨论和补充"
+    },
+    "title_examples": [
+      "如何从零开始搭建AI Agent工作流？",
+      "AI Agent在实际工作中的应用效果如何？",
+      "普通人如何利用AI提升工作效率？"
+    ]
+  },
+  "xiaohongshu": {
+    "name": "小红书",
+    "characteristics": {
+      "title_style": "生活化，情感化，标签丰富",
+      "content_length": "500-1500字",
+      "structure": "个人体验+实用技巧+美图展示",
+      "tone": "轻松活泼，分享感强",
+      "formatting": "图文并茂，标签丰富，互动性强",
+      "interaction": "鼓励点赞收藏"
+    },
+    "title_examples": [
+      "💻我用AI Agent写文章，效率提升10倍！",
+      "🔥普通人也能学会的AI工作流搭建指南",
+      "📝从录音稿到爆款文章，我只用了10分钟"
+    ]
+  },
+  "bilibili": {
+    "name": "B站",
+    "characteristics": {
+      "title_style": "吸引眼球，带有悬念，使用网络用语",
+      "content_length": "视频脚本2000-4000字",
+      "structure": "开场吸引+内容展开+互动引导",
+      "tone": "年轻化，幽默风趣，互动性强",
+      "formatting": "节奏紧凑，画面感强，梗点丰富",
+      "interaction": "鼓励三连和弹幕"
+    },
+    "title_examples": [
+      "我用AI Agent写文章，结果震惊了所有人！",
+      "普通人也能学会的AI工作流，看完就能上手",
+      "从录音稿到爆款文章，我只用了10分钟？"
+    ]
+  }
+}
