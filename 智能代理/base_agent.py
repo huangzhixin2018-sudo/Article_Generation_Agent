@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 基础Agent类 - 提供AI Agent的核心功能
 """
@@ -13,10 +14,10 @@ class BaseAgent:
     def __init__(self, config_dir="系统配置"):
         """初始化Agent"""
         self.config_dir = config_dir
+        self.setup_logging()
         self.settings = self._load_settings()
         self.templates = self._load_templates()
         self.platform_styles = self._load_platform_styles()
-        self.setup_logging()
     
     def _load_settings(self):
         """加载系统配置"""
@@ -98,7 +99,7 @@ class BaseAgent:
             return False
     
     def save_json(self, file_path, data):
-        """保存JSON文件"""
+        """保存JSON数据"""
         try:
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -109,31 +110,23 @@ class BaseAgent:
             self.logger.error(f"保存JSON文件失败 {file_path}: {e}")
             return False
     
-    def get_platform_style(self, platform=None):
-        """获取平台写作风格"""
-        if not platform:
-            platform = self.settings.get("target_platform", "wechat_public")
+    def call_ai(self, prompt, task_type="general"):
+        """调用AI处理任务（模拟版本）"""
+        platform_style = self.get_platform_style()
         
-        return self.platform_styles.get(platform, {})
-    
-    def call_ai(self, prompt, task_type="general", platform=None):
-        """调用AI模型（模拟）"""
-        self.logger.info(f"AI调用: {task_type}")
-        
-        # 获取平台风格
-        platform_style = self.get_platform_style(platform)
-        
-        # 根据任务类型和模板生成响应
         if task_type == "extract_elements":
             # 使用要素提取模板
             template = self.templates.get('elements_extraction', '')
-            prompt = f"基于以下模板和素材，提取文章要素：\n\n模板：\n{template}\n\n素材：{prompt}"
+            prompt = f"基于以下模板提取文章要素：\n\n模板：\n{template}\n\n素材：{prompt}"
             
             return {
-                "basic_info": {
-                    "topic": f"基于{platform_style.get('name', '平台')}的文章主题",
-                    "target_audience": "目标读者",
-                    "article_type": "经验分享"
+                "target_audience": {
+                    "primary": "目标读者群体",
+                    "secondary": "次要读者群体"
+                },
+                "content_theme": {
+                    "main_topic": "文章主题",
+                    "sub_topics": ["子主题1", "子主题2"]
                 },
                 "core_points": {
                     "main_argument": "主要论点",
@@ -203,6 +196,11 @@ class BaseAgent:
         
         self.logger.info(f"成功加载 {len(materials)} 个素材文件")
         return materials
+    
+    def get_platform_style(self):
+        """获取平台风格配置"""
+        target_platform = self.settings.get("target_platform", "wechat_public")
+        return self.platform_styles.get(target_platform, {})
     
     def save_results(self, results):
         """保存结果到输出目录"""
